@@ -1,12 +1,14 @@
 import React from 'react';
 import { MdDeleteForever } from 'react-icons/md'
+import Tinymce from './Tinymce';
 
-export default function Note(){
+
+export default function Note( {date, text, id}){
     return(
         <div className='note'>
-            <span>Hello this is our first note</span>
+            <span>{text}</span>
             <div className='note-footer'>
-                <small>15/05/2023</small>
+                <small>{date}</small>
                 <MdDeleteForever className='delete-icon' size='1.3em' />
             </div>
         </div>

@@ -14,11 +14,12 @@ code {
 
 /* styling the div with a className of note */
 .note {
-  background-color: #FFD479;
-  margin-bottom: 10px;
+  background-color: #00FA92;
+  /* margin-bottom: 10px; */
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
+  /*box-shadow: 0px, 4px, 8px, 0px, rgba(0, 0, 0, 0.2);*/
 
   /* styling the date and bin icon */
   display: flex;  /* means that the div with a class name of note is flexbox container*/
@@ -30,8 +31,99 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
-/**/
+/* styling the notes-list component using CSS grids */
+
+.notes-list {
+  display: grid; /* means that the notes-list div is a css grid container */
+  grid-gap: 1rem; /* adds spacing around each of the notes on the grid*/
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* specifies a range as opposed to a single value. a column cannot be smaller than 250px, and it cannot be bigger than 1 fractional unit (FR). divides the columns each with a set width of 250px. auto-fit automatically resizes the column based on the size specified i.e 250px */
+}
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto; /* helps keep everything centered on large screens or regardless of screen size */
+  padding-right: 15px;
+  padding-left: 15px; /* prevents the note from being pushed to the edge of the screen */
+}
+
+/*.tiny {
+  background-color: blue;
+}*/
+
+
+/* styling for login form */
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
 
 
