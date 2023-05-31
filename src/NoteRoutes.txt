@@ -1,0 +1,38 @@
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignUp from "./SignUp";
+import LogInForm from "./LogInForm";
+import LogOutForm from "./LogOutForm";
+import ContactForm from "./ContactForm";
+import ErrorPage from "./ErrorPage";
+
+
+export default function NoteRoutes(){
+    return(
+        <Router>
+            <Switch>
+                <Route path="/">
+                    <SignUp />
+                </Route>
+
+                <Route>
+                    <ErrorPage />
+                </Route>
+
+                <Route path="/login">
+                    <LogInForm />
+                </Route>
+                
+                <Route path="/logout">
+                    <LogOutForm />
+                </Route>
+
+                <Route path="/contact">
+                    <ContactForm />
+                </Route>
+
+            </Switch>
+        </Router>
+    )
+
+}

@@ -1,8 +1,10 @@
 import React from "react";
 
+
 export default function SignUp(){
+    
     return(<>
-            <form action="action_page.php" style={{border: '1px, solid, #ccc'}}>
+            <form  style={{border: '1px, solid, #ccc'}}>
                 <div class="container">
                     <h1>Sign Up</h1>
                     <p>Please fill in this form to create an account.</p>
@@ -27,6 +29,7 @@ export default function SignUp(){
                         <button type="button" class="cancelbtn">Cancel</button>
                         <button type="submit" class="signupbtn">Sign Up</button>
                     </div>
+                    <button onclick=""><a href="">Login</a></button>
                 </div>
             </form>
         </>

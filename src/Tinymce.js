@@ -2,18 +2,24 @@ import React, { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 
-export default function Tinymce() {
+export default function Tinymce({handleChange, setText}) {
   const editorRef = useRef(null);
+
   const log = () => {
     if (editorRef.current) {
       console.log(editorRef.current.getContent());
     }
   };
+
+
   return (
     <>
       <Editor
         tinymceScriptSrc={process.env.PUBLIC_URL + '/tinymce/tinymce.min.js'}
         onInit={(evt, editor) => editorRef.current = editor}
+        onEditorChange={(text, editor) => {
+          setText(editor.getContent({format: 'text'}))
+          handleChange(text)}}
         //initialValue='<p>This is the initial content of the editor.</p>'}
         init={{
           height: 200,
