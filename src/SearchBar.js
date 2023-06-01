@@ -7,7 +7,7 @@ export default function SearchBar({ handleSearchNote }){
             <MdSearch className="search-icons" size= '1.3em' />
             <input 
             type="text" 
-            placeholder="type to search..."
+            placeholder="Enter search text..."
             onChange={(event) => 
                 handleSearchNote(event.target.value)
             } />

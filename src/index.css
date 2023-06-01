@@ -153,7 +153,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 200px;
   opacity: 0.9;
 }
 
@@ -170,7 +170,7 @@ button:hover {
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
   float: left;
-  width: 50%;
+  width: 200px;
 }
 
 /* Add padding to container elements */
@@ -205,19 +205,16 @@ button:hover {
   background-color: #EBEBEB;
   border-radius: 10px;
   padding: 5px;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 .search input {
   border: none;
   background-color: #EBEBEB;
-  margin: 0px;
-  padding: 5px;
 }
 
 .search input:focus {
   outline: none;
-  
 }
 
 .dark-mode {
@@ -310,6 +307,19 @@ input[type=submit]:hover {
   border-radius: 10px;
   padding: 5px 5px 5px 10px;
 
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.emptyFields {
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 

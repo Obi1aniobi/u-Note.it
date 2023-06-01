@@ -2,7 +2,7 @@ import React from 'react';
 import Note from './Note';
 import AddNote from './AddNote';
 
-export default function NotesList({ notes, handleAddNote, handleDeleteNote }){
+export default function NotesList({ notes, handleAddNote, handleDeleteNote, editNote }){
     return(
         <div className='notes-list'>
             <AddNote handleAddNote={handleAddNote}/>
@@ -12,8 +12,8 @@ export default function NotesList({ notes, handleAddNote, handleDeleteNote }){
                     id={note.id} 
                     text={note.text} 
                     date={note.date}
-                    handleDeleteNote={handleDeleteNote}
-                      
+                    handleDeleteNote={handleDeleteNote}  
+                    editNote={editNote}
                  />
             ))} 
             

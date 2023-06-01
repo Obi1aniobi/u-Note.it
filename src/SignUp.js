@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 
 export default function SignUp(){
@@ -29,7 +31,9 @@ export default function SignUp(){
                         <button type="button" class="cancelbtn">Cancel</button>
                         <button type="submit" class="signupbtn">Sign Up</button>
                     </div>
-                    <button onclick=""><a href="">Login</a></button>
+                    <button>
+                        <Link to="../loginform" relative="path" reloadDocument>Log in</Link>
+                    </button>
                 </div>
             </form>
         </>

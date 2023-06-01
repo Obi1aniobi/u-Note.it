@@ -49,29 +49,34 @@ export default function AddNote({text, handleAddNote}){
     
      const [ noteText, setNoteText] = useState('') /* to know what the user has typed*/
      const [ textWithoutHTML, setText ] = useState('');
+     
 
     const handleChange = (text) => {
         setNoteText(text)
         
     };
 
-     const handleSaveClick = () => {
+     const handleSaveClick = async () => {
         console.log(`outside if handlesaveclick`)
         console.log({noteText})
        if(noteText.trim().length > 0){
         console.log(`in if handle save click`)
             handleAddNote(textWithoutHTML);
+            
              setNoteText('')
         }
         
     }/*the state gets updated with the new note */
 
-     return(
+       return(
         <div className="note new">
             <Tinymce handleChange={handleChange} setText={setText} />
             <div>
-                <Button as="input" type="button" value="Save" className="save" onClick={handleSaveClick}/>   
+                <Button as="input" type="button" value="Save" className="save" onClick={handleSaveClick}/>     
             </div>
-         </div>
-     )
+            
+    </div>
+  );
  }
+
+ 

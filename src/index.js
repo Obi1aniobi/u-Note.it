@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Home from './Home';
 import ContactForm from './ContactForm';
 
 import {
@@ -12,17 +12,14 @@ import SignUp from './SignUp';
 import LogInForm from './LogInForm';
 
 const router = createBrowserRouter([
-  {
-    path: "/hello",
-    element: <div>Hello world!</div>
-  },
+  
   {
     path: "/",
     element: <SignUp />
   },
   {
-    path: "/app",
-    element: <App />
+    path: "/home",
+    element: <Home />
   },
   {
     path: "/loginform",
